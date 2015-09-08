@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="867d6632-86e0-4509-98fa-d990a0db3881" 
+        solutionId="867d6632-86e0-4509-98fa-d990a0db3881" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SharePoint_App_SPContextHelper_Test"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="a82bb90f-b79a-45e3-8e54-185b9a750b77" />
+  </features>
+</package>
