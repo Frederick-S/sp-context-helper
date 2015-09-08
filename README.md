@@ -10,7 +10,7 @@ npm install sp-context-helper --save
 ```js
 var contextHelper = require('sp-context-helper');
 
-// recycleBinSize(webUrl, crossSite)
+// contextHelper(webUrl, crossSite)
 var wrapper = contextHelper('host web url', true);
 
 /* wrapper:
