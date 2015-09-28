@@ -1,6 +1,6 @@
 {
   "name": "sp-context-helper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A helper to return SP.ClientContext/SP.Web/SP.Site in app web or normal web.",
   "main": "index.js",
   "directories": {

@@ -4,7 +4,11 @@ function contextHelper(webUrl, crossSite) {
     var clientContext = null;
     var appContextSite = null;
 
-    if (crossSite) {
+    if (!webUrl) {
+        clientContext = SP.ClientContext.get_current();
+        web = clientContext.get_web();
+        site = clientContext.get_site();
+    } else if (crossSite) {
         clientContext = SP.ClientContext.get_current();
         appContextSite = new SP.AppContextSite(clientContext, webUrl);
         web = appContextSite.get_web();

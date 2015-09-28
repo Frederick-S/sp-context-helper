@@ -66,6 +66,7 @@
 
 	var wrapper1 = contextHelper(appWebUrl);
 	var wrapper2 = contextHelper(hostWebUrl, true);
+	var wrapper3 = contextHelper();
 
 	wrapper1.clientContext.load(wrapper1.web);
 	wrapper1.clientContext.executeQueryAsync(function () {
@@ -75,13 +76,21 @@
 	    wrapper2.clientContext.executeQueryAsync(function () {
 	        message += ' Host web title is ' + wrapper2.web.get_title() + '.';
 
-	        $('#message').text(message);
+	        wrapper3.clientContext.load(wrapper3.web);
+	        wrapper3.clientContext.executeQueryAsync(function () {
+	            message += ' current web title is ' + wrapper3.web.get_title() + '.';
+
+	            $('#message').text(message);
+	        }, function (sender, args) {
+	            $('#message').text(args.get_message());
+	        });
 	    }, function (sender, args) {
 	        $('#message').text(args.get_message());
 	    });
 	}, function (sender, args) {
 	    $('#message').text(args.get_message());
 	});
+
 
 /***/ },
 /* 1 */
@@ -93,7 +102,11 @@
 	    var clientContext = null;
 	    var appContextSite = null;
 
-	    if (crossSite) {
+	    if (!webUrl) {
+	        clientContext = SP.ClientContext.get_current();
+	        web = clientContext.get_web();
+	        site = clientContext.get_site();
+	    } else if (crossSite) {
 	        clientContext = SP.ClientContext.get_current();
 	        appContextSite = new SP.AppContextSite(clientContext, webUrl);
 	        web = appContextSite.get_web();
@@ -113,6 +126,7 @@
 	}
 
 	module.exports = contextHelper;
+
 
 /***/ }
 /******/ ]);
