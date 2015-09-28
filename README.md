@@ -1,5 +1,5 @@
 # sp-context-helper
-A helper to return SP.ClientContext/SP.Web/SP.Site in app web or normal web.
+A helper to return SP.ClientContext/SP.Web/SP.Site in (app) web.
 
 ## Installation
 ```
@@ -10,8 +10,14 @@ npm install sp-context-helper --save
 ```js
 var contextHelper = require('sp-context-helper');
 
-// contextHelper(webUrl, crossSite)
-var wrapper = contextHelper('host web url', true);
+// Query host web in an app web
+var wrapper1 = contextHelper('host web url', true);
+
+// Query web by url
+var wrapper2 = contextHelper('web url');
+
+// Query current web
+var wrapper3 = contextHelper();
 
 /* wrapper:
 {
