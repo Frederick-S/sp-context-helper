@@ -1,6 +1,6 @@
 {
   "name": "sp-context-helper",
-  "version": "0.0.4",
+  "version": "1.0.1",
   "description": "Get associated SP.Web and SP.Site by url.",
   "main": "index.js",
   "directories": {
@@ -22,6 +22,7 @@
     "url": "https://github.com/Frederick-S/sp-context-helper/issues"
   },
   "homepage": "https://github.com/Frederick-S/sp-context-helper#readme",
+  "typings": "index.d.ts",
   "devDependencies": {
     "tslint": "^3.12.1",
     "typescript": "^1.8.10"
