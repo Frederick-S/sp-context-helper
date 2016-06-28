@@ -1,25 +1,33 @@
 /// <reference path="./typings/index.d.ts"/>
-"use strict";
-function contextHelper(webUrl, isAppContextSite) {
-    var web = null;
-    var site = null;
-    var clientContext = null;
-    var appContextSite = null;
+
+export interface IContextWrapper {
+    web: SP.Web;
+    site: SP.Site;
+    clientContext: SP.ClientContext;
+    appContextSite: SP.AppContextSite;
+}
+
+export function contextHelper(webUrl: string, isAppContextSite: boolean): IContextWrapper {
+    let web: SP.Web = null;
+    let site: SP.Site = null;
+    let clientContext: SP.ClientContext = null;
+    let appContextSite: SP.AppContextSite = null;
+
     if (!webUrl || isAppContextSite) {
         clientContext = SP.ClientContext.get_current();
-    }
-    else {
+    } else {
         clientContext = new SP.ClientContext(webUrl);
     }
+
     if (isAppContextSite) {
         appContextSite = new SP.AppContextSite(clientContext, webUrl);
         web = appContextSite.get_web();
         site = appContextSite.get_site();
-    }
-    else {
+    } else {
         web = clientContext.get_web();
         site = clientContext.get_site();
     }
+
     return {
         web: web,
         site: site,
@@ -27,4 +35,3 @@ function contextHelper(webUrl, isAppContextSite) {
         appContextSite: appContextSite
     };
 }
-exports.contextHelper = contextHelper;
