@@ -1,7 +1,7 @@
 {
   "name": "sp-context-helper",
   "version": "0.0.4",
-  "description": "A helper to return SP.ClientContext/SP.Web/SP.Site in (app) web.",
+  "description": "Get associated SP.Web and SP.Site by url.",
   "main": "index.js",
   "directories": {
     "test": "test"
