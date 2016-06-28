@@ -5,4 +5,4 @@ export interface IContextWrapper {
     appContextSite: SP.AppContextSite;
 }
 
-export declare function contextHelper(webUrl: string, isAppContextSite: boolean): IContextWrapper;
+export declare function contextHelper(webUrl?: string, isAppContextSite?: boolean): IContextWrapper;
