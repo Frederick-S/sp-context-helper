@@ -1,5 +1,5 @@
 # sp-context-helper [![Build Status](https://travis-ci.org/Frederick-S/sp-context-helper.svg?branch=master)](https://travis-ci.org/Frederick-S/sp-context-helper)
-A helper to return SP.ClientContext/SP.Web/SP.Site in (app) web.
+Get associated SP.Web and SP.Site by url.
 
 ## Installation
 ```
