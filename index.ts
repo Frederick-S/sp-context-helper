@@ -7,7 +7,7 @@ export interface IContextWrapper {
     appContextSite: SP.AppContextSite;
 }
 
-export function contextHelper(webUrl: string, isAppContextSite: boolean): IContextWrapper {
+export function contextHelper(webUrl?: string, isAppContextSite?: boolean): IContextWrapper {
     let web: SP.Web = null;
     let site: SP.Site = null;
     let clientContext: SP.ClientContext = null;

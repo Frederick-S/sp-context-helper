@@ -49,6 +49,10 @@
     </None>
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="Scripts\src\package.json" />
+    <None Include="Scripts\src\tsconfig.json" />
+    <None Include="Scripts\src\typings\globals\jquery\typings.json" />
+    <Content Include="Scripts\src\webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.9.1.min.map" />
@@ -96,6 +100,11 @@
     <AppManifestFile Include="AppManifest.xml">
       <SubType>Designer</SubType>
     </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\src\index.ts" />
+    <TypeScriptCompile Include="Scripts\src\typings\globals\jquery\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\src\typings\index.d.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
