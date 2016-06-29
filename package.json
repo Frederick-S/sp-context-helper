@@ -1,6 +1,6 @@
 {
   "name": "sp-context-helper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get associated SP.Web and SP.Site by url.",
   "main": "index.js",
   "directories": {
