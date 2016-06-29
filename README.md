@@ -7,27 +7,40 @@ npm install sp-context-helper --save
 ```
 
 ## Usage
+### JavaScript
 ```js
-var contextHelper = require('sp-context-helper');
+import { contextHelper } from 'sp-context-helper';
 
-// Query host web in an app web
-var wrapper1 = contextHelper('host web url', true);
-
-// Query web by url
-var wrapper2 = contextHelper('web url');
-
-// Query current web
-var wrapper3 = contextHelper();
-
-/* wrapper:
-{
-    web: SP.Web
-    site: SP.Site
-    clientContext: SP.ClientContext,
-    appContextSite: SP.AppContextSite
-}
-*/
+let contextWrapper = contextHelper('web url');
 ```
+
+### TypeScript
+```
+typings install dt~microsoft.ajax --global --save
+typings install dt~sharepoint --global --save
+```
+
+```js
+/// <reference path="./typings/index.d.ts"/>
+
+import { contextHelper, IContextWrapper } from 'sp-context-helper';
+
+let contextWrapper: IContextWrapper = contextHelper('web url');
+```
+
+## API
+```js
+interface IContextWrapper {
+    web: SP.Web;
+    site: SP.Site;
+    clientContext: SP.ClientContext;
+    appContextSite: SP.AppContextSite;
+}
+
+contextHelper(webUrl?: string, isAppContextSite?: boolean): IContextWrapper
+```
+
+To query current web, use `contextHelper()`, to query host web, use `contextHelper('host url', true)`, to query web in same domain, use `contextHelper('web url')`.
 
 ## License
 MIT.
