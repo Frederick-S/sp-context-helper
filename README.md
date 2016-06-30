@@ -40,7 +40,7 @@ interface IContextWrapper {
 contextHelper(webUrl?: string, isAppContextSite?: boolean): IContextWrapper
 ```
 
-To query current web, use `contextHelper()`, to query host web, use `contextHelper('host url', true)`, to query web in same domain, use `contextHelper('web url')`.
+To query current web, use `contextHelper()`, to query host web, use `contextHelper('host url', true)`, to query web by url, use `contextHelper('web url')`.
 
 ## Test
 ```
