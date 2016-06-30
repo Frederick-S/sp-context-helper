@@ -42,5 +42,14 @@ contextHelper(webUrl?: string, isAppContextSite?: boolean): IContextWrapper
 
 To query current web, use `contextHelper()`, to query host web, use `contextHelper('host url', true)`, to query web in same domain, use `contextHelper('web url')`.
 
+## Test
+```
+cd sp-each/test/Scripts/src
+npm install
+webpack
+```
+
+Then open the project under test folder by Visual Studio and deploy the Add-in.
+
 ## License
 MIT.
