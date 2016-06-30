@@ -44,7 +44,7 @@ To query current web, use `contextHelper()`, to query host web, use `contextHelp
 
 ## Test
 ```
-cd sp-each/test/Scripts/src
+cd sp-context-helper/test/Scripts/src
 npm install
 webpack
 ```
