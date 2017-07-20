@@ -1,4 +1,6 @@
 # sp-context-helper [![Build Status](https://travis-ci.org/Frederick-S/sp-context-helper.svg?branch=master)](https://travis-ci.org/Frederick-S/sp-context-helper)
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Frederick-S/sp-context-helper.svg)](https://greenkeeper.io/)
 Get associated SP.Web and SP.Site by url.
 
 ## Installation
